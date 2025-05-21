@@ -1,10 +1,10 @@
 import React from "react";
 import DeleteOutlineOutlinedIcon from "@mui/icons-material/DeleteOutlineOutlined";
 import SyncAltIcon from "@mui/icons-material/SyncAlt";
-function Todo() {
+function Todo({ item }) {
   return (
     <div className="tasks">
-      <h3>Here's my first task</h3>
+      <h3>{item}</h3>
       <div className="btn">
         <button className="update-btn">
           <SyncAltIcon />
