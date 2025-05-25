@@ -1,15 +1,22 @@
 import React from "react";
 import DeleteOutlineOutlinedIcon from "@mui/icons-material/DeleteOutlineOutlined";
 import SyncAltIcon from "@mui/icons-material/SyncAlt";
-function Todo({ item }) {
+function Todo({ item, deleteTask, index, updateTask }) {
   return (
     <div className="tasks">
-      <h3>{item}</h3>
+      <div className="task">
+        <h3>{item}</h3>
+      </div>
       <div className="btn">
-        <button className="update-btn">
+        <button
+          className="update-btn"
+          onClick={() => {
+            updateTask(index);
+          }}
+        >
           <SyncAltIcon />
         </button>
-        <button className="delete-btn">
+        <button className="delete-btn" onClick={() => deleteTask(index)}>
           <DeleteOutlineOutlinedIcon />
         </button>
       </div>

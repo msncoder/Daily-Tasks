@@ -14,15 +14,19 @@
 }
 
 .sub-container {
-  height: 80vh;
+  min-height: 80vh;
   width: 30vw;
   background-color: white;
-  border-radius: 20px;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   row-gap: 20px;
+  /* overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-behavior: smooth; */
 }
+
 .upper {
   width: 30vw;
 }
@@ -33,13 +37,14 @@
   padding: 9px;
   width: 65%;
   border: 2px solid lightgray;
+  border-radius: 10px;
 }
 
 .input-btn {
   margin-left: 10px;
   margin-top: 30px;
-  padding: 10px;
-  padding-block: 15px;
+  padding: 0px;
+  padding-block: 10px;
   width: 20%;
   background-color: purple;
   border: none;
@@ -61,7 +66,8 @@
   border-radius: 10px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  flex-wrap: wrap;
   margin-left: 20px;
   margin-right: 30px;
 }
@@ -79,4 +85,10 @@
   color: white;
   background-color: purple;
   cursor: pointer;
+}
+
+.heading {
+  color: white;
+  margin: 10px;
+  font-size: 40px;
 }
